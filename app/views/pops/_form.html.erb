@@ -1,0 +1,65 @@
+<div class="row">
+  <%= form_with model: @pop, local: true, class: "col s6 offset-s3" do |f| %>
+
+    <div class="row">
+      <div class="input-field col s9">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="input-field col s3">
+        <%= f.label :number %>
+        <%= f.text_field :number %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :exclusivity %>
+        <%= f.text_field :exclusivity %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.label :collection %>
+        <%= f.text_field :collection %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s4">
+        <%= f.label :amount_paid, "Amount Paid" %>
+        <%= f.text_field :amount_paid %>
+      </div>
+      <div class="input-field col s4">
+        <%= f.label :quantity %>
+        <%= f.text_field :quantity %>
+      </div>
+      <div class="input-field col s4">
+        <%= f.label :box_number, "Box Number" %>
+        <%= f.text_field :box_number %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :notes %>
+        <%= f.text_area :notes, class: "materialize-textarea" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :ppg_url, "PPG URL" %>
+        <%= f.text_field :ppg_url %>
+      </div>
+    </div>
+
+    <%= f.submit class: "waves-effect waves-light btn" %>
+
+  <% end %>
+</div>

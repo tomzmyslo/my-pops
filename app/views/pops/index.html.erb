@@ -1,0 +1,33 @@
+
+<table class="highlight">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="center-align">Number</th>
+      <th class="center-align">Quantity</th>
+      <th class="center-align">Value</th>
+      <th class="center-align">Total</th>
+      <th class="center-align">Net</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pops.each do |pop| %>
+      <tr>
+        <td>
+          <%= link_to pop.name, pop %>
+          <% if pop.exclusive %>
+            <span class="right-align new badge" data-badge-caption=""><%= pop.exclusivity %></span>
+          <% end %>
+        </td>
+        <td class="center-align">#<%= pop.number %></td>
+        <td class="center-align"><%= pop.quantity %></td>
+        <td class="center-align"><%= number_to_currency pop.ppg_price, precision: 0 %></td>
+        <td class="center-align"><%= number_to_currency pop.total, precision: 0 %></td>
+        <td class="center-align"><%= pop.net %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
