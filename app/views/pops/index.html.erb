@@ -5,6 +5,7 @@
       <th>Name</th>
       <th class="center-align">Number</th>
       <th class="center-align">Quantity</th>
+      <th class="center-align">Paid</th>
       <th class="center-align">Value</th>
       <th class="center-align">Total</th>
       <th class="center-align">Net</th>
@@ -23,6 +24,7 @@
         </td>
         <td class="center-align">#<%= pop.number %></td>
         <td class="center-align"><%= pop.quantity %></td>
+        <td class="center-align"><%= number_to_currency pop.amount_paid, precision: 0 %></td>
         <td class="center-align"><%= number_to_currency pop.ppg_price, precision: 0 %></td>
         <td class="center-align"><%= number_to_currency pop.total, precision: 0 %></td>
         <td class="center-align"><%= pop.net %></td>
