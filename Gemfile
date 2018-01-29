@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
+
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 gem 'nokogiri'
 
 group :development, :test do

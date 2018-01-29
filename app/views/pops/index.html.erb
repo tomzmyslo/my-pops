@@ -1,5 +1,5 @@
 
-<table class="highlight">
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -19,7 +19,7 @@
         <td>
           <%= link_to pop.name, pop %>
           <% if pop.exclusive %>
-            <span class="right-align new badge" data-badge-caption=""><%= pop.exclusivity %></span>
+            <span class="badge badge-primary text-right"><%= pop.exclusivity %></span>
           <% end %>
         </td>
         <td class="center-align">#<%= pop.number %></td>

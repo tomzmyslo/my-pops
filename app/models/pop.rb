@@ -9,7 +9,7 @@ class Pop < ApplicationRecord
   def net
     net = ((self.ppg_price * self.quantity) - (self.amount_paid * self.quantity)).round(2)
     if net < 0
-      "<span class='red-text'>($#{net * -1})</span>".html_safe
+      "<span class='text-danger'>($#{net * -1})</span>".html_safe
     else
       "$#{net}".html_safe
     end
